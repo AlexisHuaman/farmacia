@@ -34,7 +34,7 @@
                         <i class="fas fa-lock"></i>
                     </div>
                     <div class="div">
-                        <h5>Contrasena</h5>
+                        <h5>Password</h5>
                         <input type="password" name="pass" class="input">
                     </div>
                 </div>
