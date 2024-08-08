@@ -2,6 +2,7 @@
 include_once 'conexion.php';
 class usuario{
     var $objetos;
+    public $acceso = null;
     public function __construct()
     {
         $db = new conexion();

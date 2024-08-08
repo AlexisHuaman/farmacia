@@ -1,9 +1,6 @@
 <?php
 include_once '../modelo/usuario.php';
     session_start();
-    $user = $_POST['user'];
-    $pass = $_POST['pass'];
-    $usuario = new usuario();
 
     if(!empty($_SESSION['tipo_usuario'])){
         switch($_SESSION['tipo_usuario']){
@@ -16,6 +13,10 @@ include_once '../modelo/usuario.php';
         }
     }
     else{
+        $user = $_POST['user'];
+        $pass = $_POST['pass'];
+        $usuario = new usuario();
+
         $usuario->logearse($user,$pass);
         if(!empty($usuario->objetos)){
             foreach($usuario->objetos as $objeto){
@@ -33,7 +34,7 @@ include_once '../modelo/usuario.php';
             }
         }
         else{
-            header('location: ../vista/login.php');
+            header('location: ../index.php');
         }
     }
 ?>

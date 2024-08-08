@@ -66,6 +66,6 @@ if($_SESSION['tipo_usuario']==1)
 include_once 'layouts/footer.php';
 }
 else{
-    header('location: ../vista/login.php');
+    header('location: /index.php');
 }
 ?>
