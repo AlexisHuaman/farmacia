@@ -40,7 +40,17 @@ if($_SESSION['tipo_usuario']==1)
                                 </div>
                                 <h3 class="profile-username text-center text-success">Nombre</h3>
                                 <p class="text-muted text-center">Apellido</p>
-                                <ul class="list-group list-group-unbor"></ul>
+                                <ul class="list-group list-group-unbordered mb-3"></ul>
+                                  <li class="list-group-item">
+                                    <b style="color:#0B7300">Edad</b><a class="float-right">12</a>
+                                  </li>
+                                  <li class="list-group-item">
+                                    <b style="color:#0B7300">DNI</b><a class="float-right">12</a>
+                                  </li>
+                                  <li class="list-group-item">
+                                    <b style="color:#0B7300">Tipo Usuario</b>
+                                    <span class="float-right badge badge-primary">Administrador</span>
+                                  </li>
                             </div>
                         </div>
                     </div>
