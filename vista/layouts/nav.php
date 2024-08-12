@@ -47,7 +47,7 @@
         <div class="info">
             <a href="#" class="d-block">
              <?php
-             echo $_SESSION['nombre_usuario'];
+             echo $_SESSION['nombre_us'];
              ?>
             </a>
         </div>

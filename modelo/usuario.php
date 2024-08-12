@@ -9,9 +9,16 @@ class usuario{
         $this->acceso = $db->pdo;
     }
     function logearse($dni, $pass){
-        $sql = "SELECT * FROM usuario INNER JOIN tipo_usuario on prod_tipo_usuario = id_tipo_usuario where dni=:dni and contrasena=:pass";
+        $sql = "SELECT * FROM usuario INNER JOIN tipo_usuario on prod_tipo_usuario = id_tipo_usuario where dni_us=:dni and contrasena_us=:pass";
         $query = $this->acceso->prepare($sql);
         $query->execute(array(':dni'=>$dni, ':pass'=>$pass));
+        $this->objetos = $query->fetchAll();
+        return $this->objetos;
+    }
+    function obtener_datos($id){
+        $sql = "SELECT * FROM usuario JOIN tipo_usuario on prod_tipo_usuario = id_tipo_usuario and id_usuario=:pass";
+        $query = $this->acceso->prepare($sql);
+        $query->execute(array(':id'=>$id));
         $this->objetos = $query->fetchAll();
         return $this->objetos;
     }
