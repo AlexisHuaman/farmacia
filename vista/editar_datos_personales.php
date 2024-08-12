@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 
@@ -72,26 +71,26 @@ if($_SESSION['tipo_usuario']==1)
                           </div>
                           <div class="card-body">
                             <strong style="color:#087300">
-                              <i id="telefono_us" class="fas fa-phone mr-1"></i>Telefono
+                              <i  class="fas fa-phone mr-1"></i>Telefono
                             </strong>
-                            <p class="text-muted">4234234</p>
+                            <p id="telefono_us" class="text-muted">4234234</p>
                             <strong style="color:#087300">
-                              <i id="residencia_us" class="fas fa-map-marker-alt mr-1"></i>Residencia
+                              <i class="fas fa-map-marker-alt mr-1"></i>Residencia
                             </strong>
-                            <p class="text-muted">4234234</p>
+                            <p id="residencia_us" class="text-muted">4234234</p>
                             <strong style="color:#087300">
-                              <i id="correo_us" class="fas fa-ar mr-1"></i>Correo
+                              <i  class="fas fa-ar mr-1"></i>Correo
                             </strong>
-                            <p class="text-muted">4234234</p>
+                            <p id="correo_us" class="text-muted">4234234</p>
                             <strong style="color:#087300">
-                              <i id="sexo_us" class="fas fa-smile-wink mr-1"></i>Sexo
+                              <i class="fas fa-smile-wink mr-1"></i>Sexo
                             </strong>
-                            <p class="text-muted">4234234</p>
+                            <p id="sexo_us" class="text-muted">4234234</p>
                             <strong style="color:#087300">
-                              <i id="adicional_us" class="fas fa-pencil-alt mr-1"></i>Informacion adicional
+                              <i  class="fas fa-pencil-alt mr-1"></i>Informacion adicional
                             </strong>
-                            <p class="text-muted">4234234</p>
-                            <button class="btn btn-block bg-gradient-danger">Editar</button>
+                            <p id="adicional_us" class="text-muted">4234234</p>
+                            <button class="edit btn btn-block bg-gradient-danger">Editar</button>
                           </div>
                           <div class="card-footer">
                             <p class="text-muted">Click en el boton si desea editar</p>
@@ -106,7 +105,15 @@ if($_SESSION['tipo_usuario']==1)
                           <h3 class="card-little">Editar datos personales</h3>
                         </div>
                         <div class="card-body">
-                          <form class="form-horizontal">
+                          <div class="alert alert-success text-center" id="editado" style='display:none;'>
+                            <span><i calss="fas fa-check m-1">Editado</i></span>  
+                          </div>
+
+                          <div class="alert alert-danger text-center" id="noeditado" style='display:none;'>
+                            <span><i calss="fas fa-times m-1">Edicion deshabilitada</i></span>  
+                          </div>
+
+                          <form id="form-usuario" class="form-horizontal">
                             <div class="form-group row">
                               <label for="telefono" class="col-sm-2 col-form-label">Telefono</label>
                               <div class="col-sm-10">
@@ -116,7 +123,7 @@ if($_SESSION['tipo_usuario']==1)
                             <div class="form-group row">
                               <label for="residencia" class="col-sm-2 col-form-label">Residencia</label>
                               <div class="col-sm-10">
-                                <input type="text" id="residencia" class="form-control">
+                              <input type="text" id="residencia" class="form-control">
                               </div>
                             </div>
                             <div class="form-group row">

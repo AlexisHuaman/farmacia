@@ -22,7 +22,7 @@ include_once '../modelo/usuario.php';
             foreach($usuario->objetos as $objeto){
                 $_SESSION['usuario']=$objeto->id_usuario;
                 $_SESSION['tipo_usuario']=$objeto->prod_tipo_usuario;
-                $_SESSION['nombre_usuario']=$objeto->nombre;
+                $_SESSION['nombre_usuario']=$objeto->nombre_us;
             }
             switch($_SESSION['tipo_usuario']){
                 case 1:
